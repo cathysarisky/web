@@ -19,8 +19,7 @@
  OneSignal.push(function() {
   // Occurs when the user's subscription changes to a new value.
   OneSignal.on('subscriptionChange', function (isSubscribed) {
-    open(location, '_self').close();
-    console.log('tried to close the window');
+    console.log("The user's subscription state is now:", isSubscribed);
   });
   
   // This event can be listened to via the `on()` or `once()` listener.
@@ -36,5 +35,3 @@
 </head>
 <body>
   After you accept subscriptions, come on back!</body>
-
-<div class='onesignal-customlink-container'></div>
