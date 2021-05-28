@@ -19,7 +19,7 @@
  //Example with callback
 OneSignal.push(function() {
   OneSignal.sendTags({
-    key: 'fromweb',
+    key: 'fromweb2',
   }, function(tagsSent) {
      console.log('did it');   
      window.open('','_self').close();
