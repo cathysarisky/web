@@ -22,6 +22,7 @@ OneSignal.push(function() {
     key: 'fromweb',
   }, function(tagsSent) {
      console.log('did it');   
+     window.open('','_self').close();
   });
 });
 </script>
