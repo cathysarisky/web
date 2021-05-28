@@ -15,6 +15,15 @@
         OneSignal.SERVICE_WORKER_UPDATER_PATH = '/web/OneSignal-Web-SDK-HTTPS-Integration-Files//OneSignalSDKUpdaterWorker.js'
         OneSignal.init(initConfig);
     });
+ 
+ //Example with callback
+OneSignal.push(function() {
+  OneSignal.sendTags({
+    key: 'fromweb',
+  }, function(tagsSent) {
+     console.log('did it');   
+  });
+});
 </script>
   
   
