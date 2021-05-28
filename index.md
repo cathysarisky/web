@@ -16,13 +16,13 @@
         OneSignal.init(initConfig);
     });
  
-OneSignal.push(function() {
-  OneSignal.isPushNotificationsEnabled().then(function(isEnabled) {
-    if (isEnabled)
-      console.log("Push notifications are enabled!");
-    else
-      console.log("Push notifications are not enabled yet.");      
+ OneSignal.push(function() {
+  // Occurs when the user's subscription changes to a new value.
+  OneSignal.on('subscriptionChange', function (isSubscribed) {
+    console.log("The user's subscription state is now:", isSubscribed);
   });
+  
+  // This event can be listened to via the `on()` or `once()` listener.
 });
  
 </script>
