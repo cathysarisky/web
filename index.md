@@ -19,8 +19,7 @@
 OneSignal.push(function() {
   OneSignal.isPushNotificationsEnabled().then(function(isEnabled) {
     if (isEnabled)
-  
-      open(location, '_self').close();
+      console.log("Push notifications are enabled!");
     else
       console.log("Push notifications are not enabled yet.");      
   });
