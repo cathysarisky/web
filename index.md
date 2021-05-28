@@ -16,15 +16,15 @@
         OneSignal.init(initConfig);
     });
  
- //Example with callback
 OneSignal.push(function() {
-  OneSignal.sendTags({
-    key: 'fromweb2',
-  }, function(tagsSent) {
-     console.log('did it');   
-     window.open('','_self').close();
+  // Occurs when the user's subscription changes to a new value.
+  OneSignal.on('subscriptionChange', function (isSubscribed) {
+    console.log("The user's subscription state is now:", isSubscribed);
   });
+  
+  // This event can be listened to via the `on()` or `once()` listener.
 });
+ 
 </script>
   
   
