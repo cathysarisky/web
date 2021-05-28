@@ -1,4 +1,5 @@
 <head>
+
   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 <script>
   window.OneSignal = window.OneSignal || [];
@@ -10,4 +11,4 @@
 </script>
 </head>
 <body>
-  a really skimpy page</body>
+  After you accept subscriptions, come on back!</body>
