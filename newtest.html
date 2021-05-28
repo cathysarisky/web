@@ -20,9 +20,11 @@
   // Occurs when the user's subscription changes to a new value.
   OneSignal.on('subscriptionChange', function (isSubscribed) {
     console.log("The user's subscription state is now:", isSubscribed);
-    if (isSubscribed)
-      $("field_name").update("New text");
+    if (isSubscribed) {
       $('my_text_here').update('You are now subscribed!');
+    } else { 
+     $('my_text_here').update('You are NOT subscribed!');
+    }
   });
   
   // This event can be listened to via the `on()` or `once()` listener.
