@@ -36,3 +36,4 @@
 <body>
   After you accept subscriptions, come on back!</body>
 
+<div class='onesignal-customlink-container'></div>
