@@ -21,9 +21,11 @@
   OneSignal.on('subscriptionChange', function (isSubscribed) {
     console.log("The user's subscription state is now:", isSubscribed);
     if (isSubscribed) {
-      $('my_text_here').update('You are now subscribed!');
+     var element = document.getElementById("my_text_here");
+      element.innerHTML = "You are now subscribed!";
     } else { 
-     $('my_text_here').update('You are NOT subscribed!');
+     var element = document.getElementById("my_text_here");
+      element.innerHTML = "You are NOT subscribed!";
     }
   });
   
