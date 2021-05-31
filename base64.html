@@ -29,7 +29,7 @@ ThunkableWebviewerExtension.postMessage('my_image is ' + my_image);
 var file = my_image
 
 var return_this = getBase64(file); // prints the base64 string
-ThunkableWebviewerExtension.postMessage(return_this);  
+ThunkableWebviewerExtension.postMessage('returning this: ' + return_this);  
 
 
   
@@ -43,3 +43,7 @@ ThunkableWebviewerExtension.postMessage(return_this);
 //});
   
 </script>
+
+<body>
+   version 1
+</body> 
