@@ -1,13 +1,17 @@
+<script src="https://thunkable.github.io/webviewer-extension/thunkableWebviewerExtension.js" type="text/javascript"></script>
 
-<script>
-  
+<script>  
 function getBase64(file) {
    var reader = new FileReader();
    reader.readAsDataURL(file);
    reader.onload = function () {
+ 
+     ThunkableWebviewerExtension.postMessage(reader.result);
      console.log(reader.result);
    };
    reader.onerror = function (error) {
+     
+     ThunkableWebviewerExtension.postMessage('Error: ', error);
      console.log('Error: ', error);
    };
 };
