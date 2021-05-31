@@ -21,6 +21,8 @@ function getBase64(file) {
   const urlParams = new URLSearchParams(queryString);
   const my_image = 'image_loc,' + urlParams.get('code') ;
 
+ThunkableWebviewerExtension.postMessage(my_image);   
+   
 // var file = document.querySelector('#files > input[type="file"]').files[0];
 var file = my_image
 
