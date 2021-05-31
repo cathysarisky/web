@@ -19,7 +19,7 @@ function getBase64(file) {
   const queryString = window.location.search;
   console.log(queryString);
   const urlParams = new URLSearchParams(queryString);
-  const my_image = 'image_loc,' + urlParams.get('code') ;
+  const my_image = urlParams.get('image_loc') ;
 
 ThunkableWebviewerExtension.postMessage(my_image);   
    
