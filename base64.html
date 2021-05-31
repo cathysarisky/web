@@ -1,0 +1,37 @@
+
+<script>
+  
+function getBase64(file) {
+   var reader = new FileReader();
+   reader.readAsDataURL(file);
+   reader.onload = function () {
+     console.log(reader.result);
+   };
+   reader.onerror = function (error) {
+     console.log('Error: ', error);
+   };
+};
+
+  const queryString = window.location.search;
+  console.log(queryString);
+  const urlParams = new URLSearchParams(queryString);
+  const my_image = 'image_loc,' + urlParams.get('code') ;
+
+// var file = document.querySelector('#files > input[type="file"]').files[0];
+var file = my_image
+
+getBase64(file); // prints the base64 string
+
+
+
+  
+// ThunkableWebviewerExtension.postMessage(my_code);
+  
+  // when we get a message from the app, display it on the page
+//ThunkableWebviewerExtension.receiveMessage(function(message) {
+  // Do something with your message
+//  const reply_message = 'base64,' + btoa(message);
+//ThunkableWebviewerExtension.postMessage(reply_message);
+//});
+  
+</script>
