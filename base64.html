@@ -5,7 +5,7 @@ function getBase64(file) {
    var reader = new FileReader();
 
    reader.readAsDataURL(file);
-   ThunkableWebviewerExtension.postMessage('file is ' + file);
+   ThunkableWebviewerExtension.postMessage('file is still ' + file);
    reader.onload = function () {
  
      ThunkableWebviewerExtension.postMessage(reader.result);
