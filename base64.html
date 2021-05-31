@@ -3,8 +3,9 @@
 <script>  
 function getBase64(file) {
    var reader = new FileReader();
-   ThunkableWebviewerExtension.postMessage('file is ' + file);
+
    reader.readAsDataURL(file);
+   ThunkableWebviewerExtension.postMessage('file is ' + file);
    reader.onload = function () {
  
      ThunkableWebviewerExtension.postMessage(reader.result);
