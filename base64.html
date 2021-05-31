@@ -3,7 +3,7 @@
 <script>  
 function getBase64(file) {
    var reader = new FileReader();
-
+   ThunkableWebviewerExtension.postMessage('file is ' + file);
    reader.readAsDataURL(file);
    ThunkableWebviewerExtension.postMessage('file is still ' + file);
    reader.onload = function () {
@@ -23,7 +23,7 @@ function getBase64(file) {
   const urlParams = new URLSearchParams(queryString);
   const my_image = urlParams.get('image_loc') ;
 
-ThunkableWebviewerExtension.postMessage(my_image);   
+ThunkableWebviewerExtension.postMessage('my_image is ' + my_image);   
    
 // var file = document.querySelector('#files > input[type="file"]').files[0];
 var file = my_image
